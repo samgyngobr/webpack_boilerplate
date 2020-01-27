@@ -16,5 +16,6 @@ $theme-colors: (
 //$btn-primary-bg: #006699;
 
 @import "~bootstrap/scss/bootstrap";
+@import "./utils.css";
 
 body { background: url(../images/bg_login.jpg) center top no-repeat; background-size: cover; }
