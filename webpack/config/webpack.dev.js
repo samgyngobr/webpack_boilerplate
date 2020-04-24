@@ -25,7 +25,7 @@ module.exports = {
         },
         {
           // Now we apply rule for images
-          test: /\.(png|jpe?g|gif|svg)$/,
+          test: /\.(png|jpe?g|gif|svg|eot|woff|ttf|svg|woff2)$/,
           use: [
             {
               // Using file-loader for these files
@@ -34,7 +34,7 @@ module.exports = {
               // In options we can set different things like format
               // and directory to save
               options: {
-                outputPath: 'images'
+                outputPath: 'assets'
               }
             }
           ]
@@ -45,22 +45,19 @@ module.exports = {
         },
         {
           test: /\.(scss)$/,
-          use: [{
-            loader: MiniCssExtractPlugin.loader, //'style-loader', // inject CSS to page
-          }, {
-            loader: 'css-loader', // translates CSS into CommonJS modules
-          }, {
-            loader: 'postcss-loader', // Run postcss actions
-            options: {
-              plugins: function () { // postcss plugins, can be exported to postcss.config.js
-                return [
-                  require('autoprefixer')
-                ];
+          use: [
+            { loader: MiniCssExtractPlugin.loader }, //'style-loader', // inject CSS to page
+            { loader: 'css-loader' }, // translates CSS into CommonJS modules
+            {
+              loader: 'postcss-loader', // Run postcss actions
+              options: {
+                plugins: function () { // postcss plugins, can be exported to postcss.config.js
+                  return [ require('autoprefixer') ];
+                }
               }
-            }
-          }, {
-            loader: 'sass-loader' // compiles Sass to CSS
-          }]
+            },
+            { loader: 'sass-loader' } // compiles Sass to CSS
+          ]
         }
       ]
     },

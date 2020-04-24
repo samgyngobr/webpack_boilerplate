@@ -8791,7 +8791,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  background: url(images/0fe39102c20ed17add71b97726bd3c7b.jpg) center top no-repeat;
+  background: url(assets/0fe39102c20ed17add71b97726bd3c7b.jpg) center top no-repeat;
   background-size: cover; }
 
 /**
@@ -8953,7 +8953,7 @@ body {
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url(images/4a37f8008959c75f619bf0a3a4e2d7a2.png) no-repeat;
+  background: url(assets/4a37f8008959c75f619bf0a3a4e2d7a2.png) no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
